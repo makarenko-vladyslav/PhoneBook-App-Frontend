@@ -1,18 +1,19 @@
 import { IoCall } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 
-import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contacts/operations";
+// import { useDispatch } from "react-redux";
+// import { deleteContact } from "../../redux/contacts/operations";
 
 import css from "./Contact.module.css";
+import { useState } from "react";
+import ModalDelete from "../ModalDelete/ModalDelete";
 
 export default function Contact({ contact: { id, name, number } }) {
-  const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <>
-      <div>
+    <div className={css.contactWrapper}>
+      <div className={css.contactInfoWrapper}>
         <p className={css.text}>
           <FaUser />
           {name}
@@ -24,9 +25,23 @@ export default function Contact({ contact: { id, name, number } }) {
         </p>
       </div>
 
-      <button className={css.btn} onClick={handleDelete}>
+      <button
+        className={css.btn}
+        onClick={() => {
+          setIsModalOpen(!isModalOpen);
+        }}
+      >
         Delete
       </button>
-    </>
+
+      {isModalOpen && (
+        <ModalDelete
+          id={id}
+          name={name}
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
+      )}
+    </div>
   );
 }
