@@ -29,6 +29,7 @@
 
 .text {
   display: flex;
+  width: 100%;
   font-weight: 600;
   align-items: center;
   gap: 12px;

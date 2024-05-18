@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
 import { logout } from "../../redux/auth/operations";
+import { LuLogOut } from "react-icons/lu";
+
 import css from "./UserMenu.module.css";
 
 export default function UserMenu() {
@@ -15,7 +17,8 @@ export default function UserMenu() {
     <div className={css.wrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
       <button className={css.btn} type="button" onClick={handleLogout}>
-        Logout
+        <LuLogOut className={css.sign} />
+        <p className={css.text}>Logout</p>
       </button>
     </div>
   );

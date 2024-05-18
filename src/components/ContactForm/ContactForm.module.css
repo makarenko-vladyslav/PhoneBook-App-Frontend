@@ -5,7 +5,8 @@
   border: 1px solid;
   border-radius: 8px;
   padding: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  margin-top: 16px;
 }
 
 .fieldWrapper {
@@ -36,6 +37,7 @@
 
 .btn {
   max-width: 120px;
+  text-wrap: nowrap;
   margin: 0 auto;
   padding: 8px 20px;
   border-radius: 4px;
