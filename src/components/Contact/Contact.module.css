@@ -1,0 +1,29 @@
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #2e6deb;
+  outline: transparent;
+  background-color: #fff;
+  color: #2e6deb;
+
+  transition: all 150ms linear;
+
+  &:focus-visible,
+  &:hover {
+    background-color: #eb2e2e;
+    border: 1px solid #eb2e2e;
+    color: #fff;
+    filter: drop-shadow(4px 4px 6px #0a0a1965);
+  }
+}
+
+.text {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
