@@ -21,7 +21,7 @@ export default function ContactsPage() {
 
   return (
     <>
-      <h1 className={css.title}>Phonebook</h1>
+      <h1 className={css.title}>PhoneBook</h1>
 
       <ContactForm />
       <SearchBox />

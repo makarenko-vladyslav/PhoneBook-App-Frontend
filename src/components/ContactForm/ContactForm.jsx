@@ -39,22 +39,22 @@ export default function ContactForm() {
     >
       <Form className={css.form}>
         <div className={css.fieldWrapper}>
-          <label htmlFor={nameFieldId}>Name</label>
           <Field
             className={css.field}
             type="text"
             name="name"
+            placeholder="Name of contact"
             id={nameFieldId}
           />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
         <div className={css.fieldWrapper}>
-          <label htmlFor={telFieldId}>Number</label>
           <Field
             className={css.field}
             type="tel"
             name="number"
+            placeholder="Phone number"
             id={telFieldId}
           />
           <ErrorMessage className={css.error} name="number" component="span" />
@@ -67,3 +67,15 @@ export default function ContactForm() {
     </Formik>
   );
 }
+
+// import { MdAlternateEmail } from "react-icons/md";
+// import { IoMdUnlock } from "react-icons/io";
+
+// <MdAlternateEmail className={css.inputIcon} />
+// <IoMdUnlock className={css.inputIcon} />
+
+// .inputIcon {
+//   position: absolute;
+//   left: 10px;
+//   top: 21px;
+// }

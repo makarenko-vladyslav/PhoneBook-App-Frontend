@@ -14,12 +14,14 @@ export default function UserMenu() {
   };
 
   return (
-    <div className={css.wrapper}>
+    // <div className={css.wrapper}>
+    <>
       <p className={css.username}>Welcome, {user.name}</p>
       <button className={css.btn} type="button" onClick={handleLogout}>
         <LuLogOut className={css.sign} />
         <p className={css.text}>Logout</p>
       </button>
-    </div>
+    </>
+    // </div>
   );
 }

@@ -3,3 +3,9 @@
   align-items: center;
   gap: 16px;
 }
+
+@media screen and (max-width: 560px) {
+  .navList {
+    display: inline;
+  }
+}
